@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, Variants } from "framer-motion";
 import { Rocket, ArrowUpRight, Activity, Palette, Layers, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 
@@ -48,7 +48,7 @@ function TiltCard({ children, className }: { children: React.ReactNode; classNam
 }
 
 export default function Services() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -58,7 +58,7 @@ export default function Services() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 40, opacity: 0, filter: "blur(10px)" },
     visible: {
       y: 0,

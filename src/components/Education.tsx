@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { GraduationCap, Calendar, MapPin, BookOpen, Award } from "lucide-react";
 
 const educationData = [
@@ -43,7 +43,7 @@ const educationData = [
 ];
 
 export default function Education() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -53,7 +53,7 @@ export default function Education() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { x: -50, opacity: 0 },
     visible: {
       x: 0,
