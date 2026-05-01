@@ -42,7 +42,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     // Initial scroll handling for hash
     const scrollToHash = () => {
       if (window.location.hash) {
-        const target = document.querySelector(window.location.hash);
+        const target = document.querySelector(window.location.hash) as HTMLElement;
         if (target) {
           lenis.scrollTo(target, { 
             offset: -80, 
@@ -73,7 +73,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
   // Handle hash navigation during active session
   useEffect(() => {
     if (window.location.hash && lenisRef.current) {
-      const target = document.querySelector(window.location.hash);
+      const target = document.querySelector(window.location.hash) as HTMLElement;
       if (target) {
         lenisRef.current.scrollTo(target, { offset: -80, duration: 1.5 });
       }
