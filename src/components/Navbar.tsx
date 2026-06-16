@@ -92,21 +92,22 @@ export default function Navbar() {
 
   const navItems = ["Home", "Education", "Skill", "Project", "Contact"];
 
-  /* Read saved theme on mount */
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const dark = saved ? saved === "dark" : true;
-    setIsDark(dark);
-    applyTheme(dark);
-    setMounted(true);
-  }, []);
-
   const applyTheme = (dark: boolean) => {
     const html = document.documentElement;
     html.classList.remove("dark", "light");
     html.classList.add(dark ? "dark" : "light");
     localStorage.setItem("theme", dark ? "dark" : "light");
   };
+
+  /* Read saved theme on mount */
+  useEffect(() => {
+    const saved = localStorage.getItem("theme");
+    const dark = saved ? saved === "dark" : true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsDark(dark);
+    applyTheme(dark);
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
     const next = !isDark;
@@ -227,7 +228,7 @@ export default function Navbar() {
             className="hidden md:block"
           >
             <motion.a
-              href="/resume.pdf"
+              href="/Mohtasim%20Billah%20Zim_S.pdf"
               download="Mohtasim_Billah_Zim_Resume.pdf"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.97 }}
@@ -301,7 +302,7 @@ export default function Navbar() {
                   <ThemeToggle isDark={isDark} onToggle={toggleTheme} />
                 )}
                 <a
-                  href="/resume.pdf"
+                  href="/Mohtasim%20Billah%20Zim_S.pdf"
                   download="Mohtasim_Billah_Zim_Resume.pdf"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white"

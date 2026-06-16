@@ -322,7 +322,7 @@ export default function Skills() {
             <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-500/30 transition-all">
               <Award className="text-emerald-400 w-5 h-5" />
             </div>
-            <span className="text-white/80 font-bold text-lg md:text-xl tracking-tight">"Turning complex algorithmic problems into <span className="text-emerald-400">elegant architecture.</span>"</span>
+            <span className="text-white/80 font-bold text-lg md:text-xl tracking-tight">&ldquo;Turning complex algorithmic problems into <span className="text-emerald-400">elegant architecture.</span>&rdquo;</span>
           </motion.div>
         </motion.div>
       </motion.div>
